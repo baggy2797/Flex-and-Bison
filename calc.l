@@ -47,6 +47,9 @@ lexerr [0-9a-z]*
 		printf("\nLexical Error: %s",yytext);
 		return(yytext[0]);
 		}
-.return yytext[0];
+		
+. {
+	return (yytext[0]);
+}
 
 %%
